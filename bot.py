@@ -243,41 +243,37 @@ async def ch(message: types.Message):
         if 'success' in ri.text:
             return await message.reply(f'''
 ✅ <b>CC</b> ➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<br>
-<b>╓Status</b> ➟ #ApprovedCVV
-<b>╠Message</b> ➟ {ri.text}
-<b>╠Took ➟ </b> <code>{toc - tic:0.2f}</code>(s)
-<b>╠Checked by</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>╚Bot</b> ➟ @{BOT_USERNAME}''')
+<b>STATUS</b> ➟ #ApprovedCVV
+<b>MSG</b> ➟ {ri.text}
+<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>CHKBY</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>BOT</b>: @{BOT_USERNAME}''')
 
         if 'incorrect_cvc' in ri.text:
             return await message.reply(f'''
 ✅ <b>CC</b> ➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<br>
-<b>╓Status</b> ➟ #ApprovedCCN
-<b>╠Message</b> ➟ {ri.text}
-<b>╠Took</b> ➟ <code>{toc - tic:0.2f}</code>(s)
-<b>╠Checked by</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>╚Bot</b> ➟ @{BOT_USERNAME}''')
+<b>STATUS</b> ➟ #ApprovedCCN
+<b>MSG</b> ➟ {ri.text}
+<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>CHKBY</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>BOT</b>: @{BOT_USERNAME}''')
 
         if 'declined' in ri.text:
             return await message.reply(f'''
 ❌ <b>CC</b> ➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<br>
-<b>╓Status</b> ➟ Declined
-<b>╠Message</b> ➟ {ri.text}
-<b>╠Took</b> ➟ <code>{toc - tic:0.2f}</code>(s)
-<b>╠Checked by</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>╚Bot</b> ➟ @{BOT_USERNAME}''')
+<b>STATUS</b> ➟ Declined
+<b>MSG</b> ➟ {ri.text}
+<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>CHKBY</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>BOT</b>: @{BOT_USERNAME}''')
 
         await message.reply(f'''
 ❌ <b>CC</b> ➟ <code>{ccn}|{mm}|{yy}|{cvv}</code>
-<br>
-<b>╓STATUS</b> ➟ DEAD
-<b>╠Message</b> ➟ {ri.text}
-<b>╠Took</b> ➟ <code>{toc - tic:0.2f}</code>(s)
-<b>╠Checked by</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
-<b>╚Bot</b> ➟ @{BOT_USERNAME}''')
+<b>STATUS</b> ➟ DEAD
+<b>MSG</b> ➟ {ri.text}
+<b>TOOK:</b> <code>{toc - tic:0.2f}</code>(s)
+<b>CHKBY</b> ➟ <a href="tg://user?id={ID}">{FIRST}</a>
+<b>BOT</b>: @{BOT_USERNAME}''')
 
 
 if __name__ == '__main__':
